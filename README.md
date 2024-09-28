@@ -1,6 +1,9 @@
 # Sudoku Solver
 
 A Sudoku solver built using a backtracking algorithm. This project provides a user-friendly interface for inputting Sudoku puzzles and displays the solved puzzle.
+The project is live at: [SudokoSolver](https://sudoko-solver-cues194su-anurag-singhs-projects-18b7525a.vercel.app/)
+
+
 
 ## Features
 
