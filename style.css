@@ -64,9 +64,13 @@ table {
     border-collapse: collapse;
 }
 
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Spacing between the buttons */
+}
+
 button {
-    display: block;
-    margin: 20px auto;
     width: 150px;
     height: 40px;
     padding: 10px;
