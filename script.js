@@ -8,19 +8,22 @@ submit.addEventListener('click', answer);
 reset.addEventListener('click', resetGrid);
 
 function answer() {
+    invalidInputMsg.style.display = 'none';  // Hide error message before validation
+
     var A = new Array(81).fill(0);
-    
     for (let i = 0; i < 81; i++) {
         const inputValue = Number(document.getElementsByTagName('input')[i].value);
         
-        if (!isNaN(inputValue) && (inputValue === 0 || (inputValue >= 1 && inputValue <= 9))) {
+        // Ensure input is between 1 and 9
+        if (!isNaN(inputValue) && (inputValue >= 1 && inputValue <= 9)) {
             A[i] = inputValue;
         } else {
-            invalidInputMsg.style.display = 'block';
-            return;
+            A[i] = 0;
+            invalidInputMsg.style.display = 'block';  // Show the error message if input is invalid
+            return;  // Stop further processing
         }
     }
-    invalidInputMsg.style.display = 'none';
+
 
     // Giving output a different color
     for (let i = 0; i < 81; i++) {
@@ -127,3 +130,4 @@ function resetGrid() {
     invalidInputMsg.style.display = 'none';
     alertMsg.style.display = 'none';
 }
+

@@ -109,3 +109,21 @@ button:active {
         font-size: 1em;
     }
 }
+
+#invalid-input-msg {
+    display: none; /* Initially hidden */
+    color: red; /* Text color */
+    font-weight: bold; /* Bold text */
+    background-color: #ffe6e6; /* Light red background */
+    border: 1px solid red; /* Red border */
+    padding: 10px; /* Padding around the text */
+    margin-top: 10px; /* Margin above the message */
+    border-radius: 5px; /* Rounded corners */
+    animation: fadeIn 0.5s; /* Fade-in effect */
+}
+
+/* Optional: Fade-in animation */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
